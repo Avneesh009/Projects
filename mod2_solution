@@ -1,1 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <style>
+        /* Resetting default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Setting font-family */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Heading style */
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 2em; /* 75% larger than dummy text */
+        }
+        
+        /* Section styles */
+        .section {
+            border: 1px solid black;
+            margin: 10px; /* Spacing between sections */
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adding shadow effect */
+        }
+        
+        /* Section title styles */
+        .section-title {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #ffcc00; /* Unique color for section title region */
+            padding: 5px 10px;
+            font-size: 1.25em; /* 25% larger than dummy text */
+        }
+        
+        /* Setting background colors for sections */
+        #chicken-section {
+            background-color: #ff9999;
+        }
+        
+        #beef-section {
+            background-color: #99ccff;
+        }
+        
+        #sushi-section {
+            background-color: #b3ffb3;
+        }
+        
+        /* Responsive layout */
+        @media screen and (min-width: 768px) and (max-width: 991px) {
+            /* Tablet view */
+            .section {
+                width: calc(50% - 20px); /* Equal width for first two sections */
+                float: left;
+            }
+            
+            #sushi-section {
+                width: 100%; /* Full width for third section */
+                clear: both; /* Clear float to move to the next row */
+            }
+        }
+        
+        @media screen and (max-width: 767px) {
+            /* Mobile view */
+            .section {
+                width: 100%; /* Full width for all sections */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Delicious Recipes</h1>
+    <div class="section" id="chicken-section">
+        <div class="section-title">Chicken</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+    <div class="section" id="beef-section">
+        <div class="section-title">Beef</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+    <div class="section" id="sushi-section">
+        <div class="section-title">Sushi</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+</body>
+</html>
 
